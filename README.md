@@ -22,13 +22,13 @@ Only need very a few changes from the original p5.js example.
 ```
 
 ## weapp-p5js-adapter
-p5.we contains "weapp-p5js-adapter", which is the key to port p5.js on WeChat Mini Game. 
+p5.we contains "[weapp-p5js-adapter](https://github.com/avantcontra/p5.we/tree/master/libs/weapp-p5js-adapter)", which is the key to port p5.js on WeChat Mini Game. 
 
 WeChat has a basic ["weapp-adapter" example](https://developers.weixin.qq.com/minigame/dev/tutorial/base/adapter.html).
 
-weapp-p5js-adapter I created is based on [weapp-adapter ES6 version](https://github.com/finscn/weapp-adapter) made by @finscn.
+"[weapp-p5js-adapter](https://github.com/avantcontra/p5.we/tree/master/libs/weapp-p5js-adapter)" I created is based on [weapp-adapter ES6 version](https://github.com/finscn/weapp-adapter) made by @finscn.
 
-more [WeChat Mini Game document](https://developers.weixin.qq.com/minigame/dev/index.html?t=19012522)
+More [WeChat Mini Game document](https://developers.weixin.qq.com/minigame/dev/index.html?t=19012522).
 
 ## TODO
 ...
