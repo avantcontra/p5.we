@@ -14,6 +14,8 @@ Just clone the project, and start forking. There are some examples in sketch dir
 
 Only need very a few changes from the original p5.js example.
 
+<img src="http://floatcc.intplusplus.org/codecomp.png" alt="code screenshot" width="800">
+
 Examples PR are always welcome!
 
 ## Code structure
@@ -21,7 +23,7 @@ Examples PR are always welcome!
 |
 ├── libs
 │   ├── symbol.js           // ES6 Symbol
-│   └── weapp-p5js-adapter  // wechat mini game p5js-adapter
+│   └── weapp-p5js-adapter  // WeChat Mini Game p5js-adapter
 │       ├── xxx.js   
 │
 ├── sketch  
