@@ -14,7 +14,9 @@ Just clone the project, and start forking. There are some examples in sketch dir
 
 Only need very a few changes from the original p5.js example.
 
-## code structure
+Examples PR are always welcome!
+
+## Code structure
 ```
 |
 ├── libs
@@ -38,10 +40,21 @@ WeChat has a basic ["weapp-adapter" example](https://developers.weixin.qq.com/mi
 
 More [WeChat Mini Game document](https://developers.weixin.qq.com/minigame/dev/index.html?t=19012522).
 
-## TODO
-...
+## NOTES
+#### CANVAS and WEBGL:
+The WeChat Mini Game only support one `canvas` to draw, created at wx.createCanvas() firstly called. If you call wx.createCanvas() multiple times, the canvas except the first one are all `offscreen`, they can't be shown on screen directly.
+
+However, p5.js will create a default canvas firstly itself on start (and the renderer is `P2D`).
+
+So if you want `WEBGL` renderer, you could hack the p5.js source code and change the default canvas from `P2D` to `WEBGL`.
+And better solutions PR are welcome~
+
+
 
 ----
+Cheers~
+
+by @avantcontra
 
 - Website: [floatbug.com/contra](https://www.floatbug.com/contra)
 - facebook: [avantcontra](https://facebook.com/avantcontra)
