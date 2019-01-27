@@ -40,7 +40,7 @@ WeChat has a basic ["weapp-adapter" example](https://developers.weixin.qq.com/mi
 
 More [WeChat Mini Game document](https://developers.weixin.qq.com/minigame/dev/index.html?t=19012522).
 
-## NOTES
+## Notes
 #### CANVAS and WEBGL:
 The WeChat Mini Game only support one `canvas` to draw, created at wx.createCanvas() firstly called. If you call wx.createCanvas() multiple times, the canvas except the first one are all `offscreen`, they can't be shown on screen directly.
 
