@@ -1,7 +1,7 @@
 import './libs/weapp-p5js-adapter/index'
 import './libs/symbol'
 
-import './sketch/base'
+import './sketch/test'
 // import './sketch/flock'
 // import './sketch/particle'
 // import './sketch/instanceMode'
