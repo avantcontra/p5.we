@@ -54,8 +54,10 @@ And better solutions PR are welcome~
 ----
 Cheers~
 
-by @avantcontra
+Contra
 
-- Website: [floatbug.com/contra](https://www.floatbug.com/contra)
+- website: [floatbug.com/contra](https://www.floatbug.com/contra)
 - facebook: [avantcontra](https://facebook.com/avantcontra)
 - twitter: [avantcontra](https://twitter.com/avantcontra)  
+- patreon (buy me a coffee): [avantcontra](https://www.patreon.com/avantcontra)
+
