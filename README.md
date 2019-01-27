@@ -1,12 +1,22 @@
 # p5.we
 p5.we is a boilerplate to develop Wechat Mini Game using p5.js.
 
+<span>
+<img src="http://floatcc.intplusplus.org/webgl-1548556237071.2019-01-27-11_32_18.gif" alt="webgl" width="250">
+
+<img src="http://floatcc.intplusplus.org/particle-small-2019-01-26-18-51-38-607.gif" alt="particle" width="250">
+
+<img src="http://floatcc.intplusplus.org/flocking-Screenrecorder-2019-01-26-23-50-03-343.2019-01-27%2011_35_38.gif" alt="flocking" width="250">
+</span>
+
 ## Usage
 Just clone the project, and start forking. There are some examples in sketch directory.
 
 Only need very a few changes from the original p5.js example.
 
-## code structure
+Examples PR are always welcome!
+
+## Code structure
 ```
 |
 ├── libs
@@ -30,10 +40,21 @@ WeChat has a basic ["weapp-adapter" example](https://developers.weixin.qq.com/mi
 
 More [WeChat Mini Game document](https://developers.weixin.qq.com/minigame/dev/index.html?t=19012522).
 
-## TODO
-...
+## Notes
+#### CANVAS and WEBGL:
+The WeChat Mini Game only support one `canvas` to draw, created at wx.createCanvas() firstly called. If you call wx.createCanvas() multiple times, the canvas except the first one are all `offscreen`, they can't be shown on screen directly.
+
+However, p5.js will create a default canvas firstly itself on start (and the renderer is `P2D`).
+
+So if you want `WEBGL` renderer, you could hack the p5.js source code and change the default canvas from `P2D` to `WEBGL`.
+And better solutions PR are welcome~
+
+
 
 ----
+Cheers~
+
+by @avantcontra
 
 - Website: [floatbug.com/contra](https://www.floatbug.com/contra)
 - facebook: [avantcontra](https://facebook.com/avantcontra)
