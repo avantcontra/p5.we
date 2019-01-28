@@ -12,7 +12,7 @@ p5.we is a boilerplate to develop Wechat Mini Game using p5.js.
 ## Usage
 Just clone the project, and start forking. You should follow [WeChat Mini Game workflow](https://developers.weixin.qq.com/minigame/en/dev/index.html?t=19012522) of course.
 
-There are some examples in sketch directory. Only need very a few changes from the original p5.js example.
+There are some examples in sketch directory. Only need very a few changes from the [original p5.js example](https://p5js.org/examples/structure-setup-and-draw.html).
 
 <img src="http://floatcc.intplusplus.org/codecomp.png" alt="code screenshot" width="800">
 
