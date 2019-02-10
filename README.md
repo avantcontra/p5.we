@@ -43,14 +43,14 @@ WeChat has a basic ["weapp-adapter" example](https://developers.weixin.qq.com/mi
 More [WeChat Mini Game document](https://developers.weixin.qq.com/minigame/dev/index.html?t=19012522).
 
 ## Notes and TODO
-- CANVAS and WEBGL:  
+- **CANVAS and WEBGL**:  
 The WeChat Mini Game only support one `canvas` to draw, created at wx.createCanvas() firstly called. If you call wx.createCanvas() multiple times, the canvas except the first one are all `offscreen`, they can't be shown on screen directly.  
 However, p5.js will create a default canvas firstly itself on start (and the renderer is `P2D`).  
 So if you want `WEBGL` renderer, you could hack the p5.js source code and change the default canvas from `P2D` to `WEBGL`.
 And better solutions PR are welcome~
 
-- p5.sound not supported yet
-- preload:  
+- **p5.sound** not supported yet
+- **preload**:  
 loadImage in preload() may not display correctly.
 https://github.com/avantcontra/p5.we/issues/1
 
