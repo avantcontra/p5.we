@@ -49,10 +49,13 @@ However, p5.js will create a default canvas firstly itself on start (and the ren
 So if you want `WEBGL` renderer, you could hack the p5.js source code and change the default canvas from `P2D` to `WEBGL`.
 And better solutions PR are welcome~
 
-- **p5.sound** not supported yet
-- **preload**:  
-loadImage in preload() may not display correctly.
-https://github.com/avantcontra/p5.we/issues/1
+- **p5 library** Only support core lib (p5.js) for now.
+
+- **preload** and **loadImage**:  
+`loadImage` in `preload` may not display correctly.  
+Canvas of the image created by `loadImage()` in `preload()`  is not the same as the canvas in `setup()` or `draw()`. It should be something conflict with WeChat Mini Game.  
+For now you can `loadPixels()` in callbackFunction of `loadImage(xxx, callbackFunction)` in `preload()`, and then setup the pixels to another Image created in `draw()`.
+More about this: https://github.com/avantcontra/p5.we/issues/1
 
 ----
 Cheers~
