@@ -12,6 +12,9 @@
 	"libVersion": "2.5.1",
 	"appid": "wx20478aeff1ed1bfa",
 	"projectname": "p5.we",
+	"packOptions": {
+		"ignore": []
+	},
 	"condition": {
 		"search": {
 			"current": -1,
