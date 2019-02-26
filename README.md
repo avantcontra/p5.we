@@ -52,6 +52,10 @@ And better solutions PR are welcome~
 - **p5 library**:   
 Only support core lib (p5.js) for now.
 
+- **blendMode**:   
+The globalCompositeOperation of RenderingContext of WeChat Mini Game is NOT the same as p5.js:
+https://developers.weixin.qq.com/minigame/dev/api/RenderingContext.html
+
 - **preload** and **loadImage**:  
 `loadImage` in `preload` may not display correctly.  
 Canvas of the image created by `loadImage()` in `preload()`  is not the same as the canvas in `setup()` or `draw()`. It should be something conflict with WeChat Mini Game.  
