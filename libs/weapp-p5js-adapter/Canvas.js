@@ -6,11 +6,11 @@ let hasModifiedCanvasPrototype = false
 let hasInit2DContextConstructor = false
 let hasInitWebGLContextConstructor = false
 
-export default function Canvas() {
+export default function Canvas(wxOffscreen = true) {
     // const canvas = wx.createCanvas()
 
     // add for p5js
-    const canvas = GameGlobal.screencanvas? GameGlobal.screencanvas : wx.createCanvas()
+    const canvas = (!wxOffscreen && GameGlobal.screencanvas)? GameGlobal.screencanvas : wx.createCanvas()
 
     const _getContext = canvas.getContext;
 

@@ -30,10 +30,13 @@ const document = {
     parentNode: null,
     parentElement: null,
 
-    createElement(tagName) {
+    createElement(tagName, tips = null, wxOffscreen = true) {
         tagName = tagName.toLowerCase();
+
+        if (tips !== null) console.log('DEBUG: createElement(' + tagName + ', ' + tips + ")");
+
         if (tagName === 'canvas') {
-            return new Canvas()
+            return new Canvas(wxOffscreen)
         } else if (tagName === 'audio') {
             return new Audio()
         } else if (tagName === 'img') {
