@@ -57,10 +57,11 @@ The globalCompositeOperation of RenderingContext of WeChat Mini Game is NOT the 
 https://developers.weixin.qq.com/minigame/dev/api/RenderingContext.html
 
 - **preload** and **loadImage**:  
-`loadImage` in `preload` may not display correctly.  
+Now you can use preload and loadImage as usual! Thanks [@xarray](https://github.com/xarray)!!   
+~~`loadImage` in `preload` may not display correctly.  
 Canvas of the image created by `loadImage()` in `preload()`  is not the same as the canvas in `setup()` or `draw()`. It should be something conflict with WeChat Mini Game.  
 For now you can `loadPixels()` in callbackFunction of `loadImage(xxx, callbackFunction)` in `preload()`, and then setup the pixels to another Image created in `draw()`.  
-More about this: https://github.com/avantcontra/p5.we/issues/1
+More about this: https://github.com/avantcontra/p5.we/issues/1~~
 
 ----
 Cheers~
