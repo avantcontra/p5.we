@@ -3,7 +3,8 @@
  * https://p5js.org/examples/simulate-flocking.html
  */
 
-import p5 from '../libs/p5.min'
+import p5 from '../libs/p5.min';
+import '../libs/p5RefactorUtil';
 
 let sysInfo = wx.getSystemInfoSync();
 let windowWidth = sysInfo.windowWidth;
@@ -21,6 +22,9 @@ window.setup = function() {
     var b = new Boid(width/2,height/2);
     flock.addBoid(b);
   }
+
+  //should set visible manually
+  canvas.style.visibility = 'visible';
 }
 
 window.draw = function() {

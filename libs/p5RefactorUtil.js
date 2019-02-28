@@ -6,10 +6,10 @@ var defaultClass = 'p5Canvas';
 p5.prototype.createCanvas = function(w, h, renderer) {
   p5._validateParameters('createCanvas', arguments);
   //optional: renderer, otherwise defaults to p2d
-  var r = renderer || P2D;
+  var r = renderer || 'p2d';
   var c;
 
-  if (r === WEBGL) {
+  if (r === 'webgl') {
     c = document.getElementById(defaultId);
     if (c) {
       //if defaultCanvas already exists
@@ -53,7 +53,7 @@ p5.prototype.createCanvas = function(w, h, renderer) {
 
   // Init our graphics renderer
   //webgl mode
-  if (r === WEBGL) {
+  if (r === 'webgl') {
     this._setProperty('_renderer', new p5.RendererGL(c, this, true));
     this._elements.push(this._renderer);
   } else {

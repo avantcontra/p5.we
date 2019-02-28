@@ -3,7 +3,8 @@
  * https://p5js.org/examples/simulate-particle-system.html
  */
 
-import p5 from '../libs/p5.min'
+import p5 from '../libs/p5.min';
+import '../libs/p5RefactorUtil';
 
 let sysInfo = wx.getSystemInfoSync();
 let windowWidth = sysInfo.windowWidth;
@@ -14,6 +15,9 @@ var system;
 window.setup = function() {
   createCanvas(windowWidth, windowHeight);
   system = new ParticleSystem(createVector(width/2, 50));
+
+  //should set visible manually
+  canvas.style.visibility = 'visible';
 }
 
 window.draw = function() {

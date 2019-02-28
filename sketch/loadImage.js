@@ -1,8 +1,8 @@
 /**
- * original p5.js example:
- * https://p5js.org/examples/structure-setup-and-draw.html
+ * loadImage
+ * should import p5RefactorUtil
  */
-import p5 from '../libs/p5.min'
+import p5 from '../libs/p5.min';
 import '../libs/p5RefactorUtil';
 
 
@@ -27,6 +27,7 @@ window.setup = function() {
   stroke(255); // Set line drawing color to white
   frameRate(30);
 
+  //should set visible manually
   canvas.style.visibility = 'visible';
 }
 // The statements in draw() are executed until the

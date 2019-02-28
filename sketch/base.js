@@ -2,7 +2,8 @@
  * original p5.js example:
  * https://p5js.org/examples/structure-setup-and-draw.html
  */
-import p5 from '../libs/p5.min'
+import p5 from '../libs/p5.min';
+import '../libs/p5RefactorUtil';
 
 let sysInfo = wx.getSystemInfoSync();
 let windowWidth = sysInfo.windowWidth;
@@ -17,6 +18,9 @@ window.setup = function() {
   createCanvas(windowWidth, windowHeight);
   stroke(255); // Set line drawing color to white
   frameRate(30);
+
+  //should set visible manually
+  canvas.style.visibility = 'visible';
 }
 // The statements in draw() are executed until the
 // program is stopped. Each statement is executed in

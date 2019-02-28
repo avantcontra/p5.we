@@ -7,7 +7,8 @@
  * https://github.com/processing/p5.js/wiki/Global-and-instance-mode#when-is-global-mode-assumed
  */
 
-import p5 from '../libs/p5.min'
+import p5 from '../libs/p5.min';
+import '../libs/p5RefactorUtil';
 
 let sysInfo = wx.getSystemInfoSync();
 let windowWidth = sysInfo.windowWidth;
@@ -19,11 +20,14 @@ const seed = function( sketch ) {
   
     sketch.setup = function() {
         // console.log('setup', windowWidth, windowHeight);
-        const cvs = sketch.createCanvas(windowWidth, windowHeight);
+        // const cvs = sketch.createCanvas(windowWidth, windowHeight);
         // console.log(cvs);
         sketch.createCanvas(windowWidth, windowHeight);
         sketch.stroke(255); // Set line drawing color to white
         sketch.frameRate(30);
+
+        //should set visible manually
+        sketch.canvas.style.visibility = 'visible';
     };
   
     sketch.draw = function() {
