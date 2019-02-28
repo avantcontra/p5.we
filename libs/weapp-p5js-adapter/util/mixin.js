@@ -121,6 +121,7 @@ export function classList(obj) {
     obj.classList.toggle = noop
 }
 
+// add for p5js
 export function dataset(obj) {
     Object.defineProperty(obj, 'dataset', {
         hidden: true,

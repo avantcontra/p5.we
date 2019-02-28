@@ -3,7 +3,8 @@
  * https://p5js.org/examples/simulate-flocking.html
  */
 
-import p5 from '../libs/p5.min'
+import p5 from '../libs/p5.min';
+import '../libs/p5RefactorUtil';
 
 let sysInfo = wx.getSystemInfoSync();
 let windowWidth = sysInfo.windowWidth;
@@ -21,6 +22,9 @@ window.setup = function() {
     var b = new Boid(width/2,height/2);
     flock.addBoid(b);
   }
+
+  //should set visible manually
+  canvas.style.visibility = 'visible';
 }
 
 window.draw = function() {
@@ -29,13 +33,22 @@ window.draw = function() {
 }
 
 // Add a new boid into the System
+
+// mouseDragged and touchMoved work in WX simulator, but don't work in real mobile device.
+// so use wx.onTouchMove here
 // window.mouseDragged = function() {
+//   // console.log('mouseDragged',window.mouseX, window.mouseY)
 //   flock.addBoid(new Boid(window.mouseX, window.mouseY));
 // }
 
-//use wechat touch event directly.(by Contra)
+// window.touchMoved = function() {
+//   // console.log('touchMoved',window.mouseX, window.mouseY)
+//   flock.addBoid(new Boid(window.mouseX, window.mouseY));
+// }
+
 wx.onTouchMove(function (t){
-    const p = t.touches[0];
+    const p = t.changedTouches[0];
+    // console.log('wx.onTouchMove', p.pageX, p.pageY)
     flock.addBoid(new Boid(p.pageX, p.pageY));
 });
 
