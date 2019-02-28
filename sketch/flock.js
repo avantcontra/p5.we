@@ -29,13 +29,22 @@ window.draw = function() {
 }
 
 // Add a new boid into the System
+
+// mouseDragged and touchMoved work in WX simulator, but don't work in real mobile device.
+// so use wx.onTouchMove here
 // window.mouseDragged = function() {
+//   // console.log('mouseDragged',window.mouseX, window.mouseY)
 //   flock.addBoid(new Boid(window.mouseX, window.mouseY));
 // }
 
-//use wechat touch event directly.(by Contra)
+// window.touchMoved = function() {
+//   // console.log('touchMoved',window.mouseX, window.mouseY)
+//   flock.addBoid(new Boid(window.mouseX, window.mouseY));
+// }
+
 wx.onTouchMove(function (t){
-    const p = t.touches[0];
+    const p = t.changedTouches[0];
+    // console.log('wx.onTouchMove', p.pageX, p.pageY)
     flock.addBoid(new Boid(p.pageX, p.pageY));
 });
 

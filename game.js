@@ -1,10 +1,10 @@
 import './libs/weapp-p5js-adapter/index'
-import './libs/symbol'
 
-import './sketch/base'
+// import './sketch/base'
 // import './sketch/flock'
 // import './sketch/particle'
 // import './sketch/instanceMode'
+import './sketch/loadImage'
 
-canvas.style.visibility = 'visible';
+
 

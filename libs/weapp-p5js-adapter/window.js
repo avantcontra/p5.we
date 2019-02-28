@@ -1,5 +1,6 @@
 import Canvas from './Canvas'
 import * as Mixin from './util/mixin'
+
 import CommonComputedStyle from './style/CommonComputedStyle'
 import getImageComputedStyle from './style/ImageComputedStyle'
 import getCanvasComputedStyle from './style/CanvasComputedStyle'
@@ -25,15 +26,19 @@ export { TouchEvent, PointerEvent, MouseEvent } from './EventIniter/index.js'
 export { default as localStorage } from './localStorage'
 export { default as location } from './location'
 export { btoa, atob } from './Base64.js'
+export { default as Symbol } from './Symbol'
 export * from './WindowProperties'
 
 const { platform } = wx.getSystemInfoSync()
 
 // 暴露全局的 canvas
-Mixin.canvas(GameGlobal);//这里不能用window by Contra
+
+//for TypeError: Cannot assign to read only property 'canvas' of object '#<Window>'
+Mixin.canvas(GameGlobal);//这里不能用window
+
 GameGlobal.screencanvas = GameGlobal.screencanvas || new Canvas()
 const canvas = GameGlobal.screencanvas;
-GameGlobal.canvas = canvas;
+// GameGlobal.canvas = canvas;
 
 function getComputedStyle(dom) {
     const tagName = dom.tagName;

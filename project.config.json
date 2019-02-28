@@ -13,7 +13,10 @@
 	"appid": "wx20478aeff1ed1bfa",
 	"projectname": "p5.we",
 	"packOptions": {
-		"ignore": []
+		"ignore": [{
+        "type": "folder",
+        "value": "bk"
+      }]
 	},
 	"condition": {
 		"search": {
