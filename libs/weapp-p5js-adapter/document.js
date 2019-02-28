@@ -148,8 +148,13 @@ const document = {
     },
 
     //#### for p5js
+    /**
+     * Confirms if the window a p5.js program is in is "focused," meaning that
+     * the sketch will accept mouse or keyboard input. This variable is
+     * "true" if the window is focused and "false" if not.
+     */
     hasFocus() {
-        
+        return true;
     }
 }
 

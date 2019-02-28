@@ -7,51 +7,45 @@ let hasInit2DContextConstructor = false
 let hasInitWebGLContextConstructor = false
 
 export default function Canvas() {
-    // const globalCanvas = canvas;
-    if(GameGlobal.screencanvas)
-        return GameGlobal.screencanvas;
+    // const canvas = wx.createCanvas()
 
-    // console.log('new Canvas')
-    const _canvas = GameGlobal.screencanvas? GameGlobal.screencanvas : wx.createCanvas()
+    // add for p5js
+    const canvas = GameGlobal.screencanvas? GameGlobal.screencanvas : wx.createCanvas()
 
-    const _getContext = _canvas.getContext;
+    const _getContext = canvas.getContext;
 
     // canvas.__proto__.__proto__.__proto__ = new HTMLCanvasElement()
 
-    if (!('tagName' in _canvas)) {
-        _canvas.tagName = 'CANVAS'
+    if (!('tagName' in canvas)) {
+        canvas.tagName = 'CANVAS'
     }
 
-    _canvas.type = 'canvas'
+    canvas.type = 'canvas'
 
-    Mixin.parentNode(_canvas);
-    Mixin.style(_canvas);
-    Mixin.classList(_canvas);
-    Mixin.clientRegion(_canvas);
-    Mixin.offsetRegion(_canvas);
-    Mixin.dataset(_canvas);
+    Mixin.parentNode(canvas);
+    Mixin.style(canvas);
+    Mixin.classList(canvas);
+    Mixin.clientRegion(canvas);
+    Mixin.offsetRegion(canvas);
+    Mixin.dataset(canvas);// add for p5js
 
-    
+    canvas.focus = function() {};
+    canvas.blur = function() {};
 
-    _canvas.focus = function() {};
-    _canvas.blur = function() {};
-
-    // _canvas.dataset = {hidden:false}
-
-    _canvas.addEventListener = function(type, listener, options = {}) {
+    canvas.addEventListener = function(type, listener, options = {}) {
         // console.log('canvas.addEventListener', type);
         document.addEventListener(type, listener, options);
     }
 
-    _canvas.removeEventListener = function(type, listener) {
+    canvas.removeEventListener = function(type, listener) {
         // console.log('canvas.removeEventListener', type);
         document.removeEventListener(type, listener);
     }
 
-    _canvas.dispatchEvent = function(event = {}) {
+    canvas.dispatchEvent = function(event = {}) {
         console.log('canvas.dispatchEvent', event.type, event);
         // nothing to do
     }
 
-    return _canvas
+    return canvas
 }

@@ -1,5 +1,4 @@
 import './libs/weapp-p5js-adapter/index'
-import './libs/symbol'
 
 import './sketch/base'
 // import './sketch/flock'
