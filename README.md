@@ -2,11 +2,11 @@
 p5.we is a boilerplate to develop Wechat Mini Game using p5.js.
 
 <span>
-<img src="http://floatcc.intplusplus.org/webgl-1548556237071.2019-01-27-11_32_18.gif" alt="webgl" width="250">
+<img src="http://float.intplusplus.cn/webgl-1548556237071.2019-01-27-11_32_18.gif" alt="webgl" width="250">
 
-<img src="http://floatcc.intplusplus.org/particle-small-2019-01-26-18-51-38-607.gif" alt="particle" width="250">
+<img src="http://float.intplusplus.cn/particle-small-2019-01-26-18-51-38-607.gif" alt="particle" width="250">
 
-<img src="http://floatcc.intplusplus.org/flocking-Screenrecorder-2019-01-26-23-50-03-343.2019-01-27%2011_35_38.gif" alt="flocking" width="250">
+<img src="http://float.intplusplus.cn/flocking-Screenrecorder-2019-01-26-23-50-03-343.2019-01-27%2011_35_38.gif" alt="flocking" width="250">
 </span>
 
 ## Usage
@@ -14,7 +14,7 @@ Just clone the project, and start forking. You should follow [WeChat Mini Game w
 
 There are some examples in sketch directory. Only need very a few changes from the [original p5.js example](https://p5js.org/examples/structure-setup-and-draw.html).
 
-<img src="http://floatcc.intplusplus.org/codecomp.png" alt="code screenshot" width="800">
+<img src="http://float.intplusplus.cn/codecomp.png" alt="code screenshot" width="800">
 
 Examples PR are always welcome!
 
